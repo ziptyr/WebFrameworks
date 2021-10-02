@@ -1,0 +1,86 @@
+.paaosio {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    background-color: white;
+    border: 10px solid white;
+    width: 650px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.artikkeliAihe {
+    color: rgb(0,81,141);
+}
+
+.pikkuartikkeli {
+    display: flex;
+    border-top: 1px solid rgb(233,234,237);
+    justify-content: space-between;
+}
+
+.pikkuOtsikko {width: 440px;}
+
+.isoKuva, .pikkuKuva {
+    display: flex;
+    border: 2px solid rgb(233,234,237);
+}
+.isoKuva {
+    width: 646px;
+}
+
+.pikkuKuva {
+    height: 109px;
+    width: 195px;
+}
+
+.sidebar {
+    background-color: white;
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    width: 290px;
+}
+
+.sidebarItem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid rgb(233,234,237);
+}
+
+.sidebarNro {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    width: 40px;
+    color: rgb(65,150,164);
+}
+
+.sidebarUutinen {
+    width: 250px;
+}
+
+.sidebarNaytaLisaa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+span.naytaLisaa {
+    padding: 10px 15px;
+    color: rgb(65,150,164);
+    font-weight: bold;
+    border: 2px solid rgb(65,150,164);
+    border-radius: 20px;
+}

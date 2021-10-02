@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.headerLeft, .headerRight {
+    align-items: center;
+    display: flex;
+}

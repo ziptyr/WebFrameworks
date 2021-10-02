@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "title": "Seagate Portable 2TB Hard Drive Portable HDD",
+        "manufacturer": "Seagate",
+        "rating": 4.7,
+        "ratings": 153309,
+        "price": 62.99
+    },
+    {
+        "id": 2,
+        "title": "Roku Express 4k+ | Streaming Media Player",
+        "manufacturer": "Roku",
+        "rating": 4.7,
+        "ratings": 5604,
+        "price": 29.00
+    },
+    {
+        "id": 3,
+        "title": "Roku Streaming Stick+ | HD/4K/HDR Streaming Device",
+        "manufacturer": "Roku",
+        "rating": 4.7,
+        "ratings": 96259,
+        "price": 47.60
+    },
+    {
+        "id": 4,
+        "title": "Spectre E248W-19203R 24\" Ultra Thin 75Hz 1080p LED Monitor",
+        "manufacturer": "Spectre",
+        "rating": 4.6,
+        "ratings": 14903,
+        "price": 141.25
+    },
+    {
+        "id": 5,
+        "title": "iPhone Charger [Apple MFi Certified] QIRUOZ 5Pack(3/3/6/6/10FT)",
+        "manufacturer": "QIRUOZ",
+        "rating": 4.5,
+        "ratings": 11277,
+        "price": 12.99
+    },
+    {
+        "id": 6,
+        "title": "Logitech H390 Wired Headset, Stereo Headphones",
+        "manufacturer": "Logitech",
+        "rating": 4.5,
+        "ratings": 29662,
+        "price": 39.00
+    },
+    {
+        "id": 7,
+        "title": "Roku Express | HD Streaming Media Plyaer",
+        "manufacturer": "Roku",
+        "rating": 4.8,
+        "ratings": 127768,
+        "price": 24.99
+    },
+    {
+        "id": 8,
+        "title": "WD 2TB Elements Portable External Hard Drive",
+        "manufacturer": "Western Digital",
+        "rating": 4.7,
+        "ratings": 89752,
+        "price": 59.99
+    },
+    {
+        "id": 9,
+        "title": "SanDisk 128GB External microSDXC UHS-I Memory Card",
+        "manufacturer": "SanDisk",
+        "rating": 4.8,
+        "ratings": 237496,
+        "price": 21.99
+    },
+    {
+        "id": 10,
+        "title": "TP-Link AC750 WiFi Extender (RE220), Covers Up to 1200 Sq.ft and 20 Devices",
+        "manufacturer": "TP-Link",
+        "rating": 4.0,
+        "ratings": 67969,
+        "price": 22.99
+    }
+]

@@ -1,0 +1,40 @@
+.shoppingList
+{
+  border: 1px black solid;
+  width: 400px;
+  padding-left: 20px;
+}
+
+#title
+{
+  margin-bottom: 5px;
+  font-family: sans-serif;
+}
+
+#titleSub
+{
+  color: gray;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.item
+{
+  background-color: pink;
+  margin-bottom: 5px;
+}
+
+.item > div
+{
+  margin-left: 35px;
+}
+
+.flex
+{
+  display: flex;
+}
+
+.itemQtyUnit
+{
+  width: 30px;
+}

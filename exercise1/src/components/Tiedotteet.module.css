@@ -1,0 +1,19 @@
+.tiedotteet {
+    display: flex;
+    justify-content: center;
+    margin: 18px 0;
+}
+
+.tiedotteetContainer {width: 1000px;}
+
+.tiedoteContainer, .mainosContainer {
+    display: flex;
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 0 20px;
+}
+
+.tiedoteContainer {background-color: rgb(65,150,164);}
+
+.mainosContainer {background-color: rgb(63,185,225);}
