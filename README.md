@@ -1,24 +1,27 @@
 ## Exercise 4 API
 
-> Replace <> parts with a corresponding value
+> Replace <> parts with a corresponding value gotten with API calls
 
 ### Items
 #### All
 
 GET
+
 > http://localhost:3000/items
 
 #### With ID
 
 GET
-> http://localhost:3000/items/<itemId>
+
+> http://localhost:3000/items/\<itemId\>
 
 #### Search
 
 Allowed <key> values: name, category, manufacturer
 
 GET
-> http://localhost:3000/items/seach/<key>/<value>
+
+> http://localhost:3000/items/seach/\<key\>/\<value\>
 
 #### Post New Item
 
@@ -34,6 +37,7 @@ GET
 ```
 
 POST
+
 > http://localhost:3000/items
 
 #### Modify Item
@@ -55,12 +59,13 @@ Partial Modify:
 
 ```
 {
-"price": 10
+  "price": 10
 }
 ```
 
 PUT
-> http://localhost:3000/items/<itemId>
+
+> http://localhost:3000/items/\<itemId\>
 
 
 ### Users
@@ -68,12 +73,14 @@ PUT
 #### Get All Users
 
 GET
+
 > http://localhost:3000/users
 
 #### Get User With ID
 
 GET
-> http://localhost:3000/users/id/<userId>
+
+> http://localhost:3000/users/id/\<userId\>
 
 #### Create a New User
 
@@ -86,6 +93,7 @@ GET
 ```
 
 POST
+
 > http://localhost:3000/users
 
 
@@ -96,27 +104,32 @@ POST
 ##### Add to Users Cart
 
 POST
-> http://localhost:3000/users/cart/<userId>/<itemId>
+
+> http://localhost:3000/users/cart/\<userId\>/\<itemId\>
 
 ##### Get Users Cart
 
 GET
-> http://localhost:3000/users/cart/<userId>
+
+> http://localhost:3000/users/cart/\<userId\>
 
 ##### Remove Item From Users Cart
 
 DELETE
-> http://localhost:3000/users/cart/<userId>/<itemId>
+
+> http://localhost:3000/users/cart/\<userId\>/\<itemId\>
 
 ##### Remove All Items From Users Cart
 
 DELETE
-> http://localhost:3000/users/cart/<userId>/<itemId>
+
+> http://localhost:3000/users/cart/\<userId\>/\<itemId\>
 
 ##### Buy Users Cart
 
 GET
-> http://localhost:3000/users/cart/buy/<userId>
+
+> http://localhost:3000/users/cart/buy/\<userId\>
 
 
 #### Invoice
@@ -124,14 +137,17 @@ GET
 ##### Get Users Invoices
 
 GET
-> http://localhost:3000/users/invoices/<userId>
+
+> http://localhost:3000/users/invoices/\<userId\>
 
 ##### Get Users Invoice
 
 GET
-> http://localhost:3000/users/invoices/<userId>/<invoiceId>
+
+> http://localhost:3000/users/invoices/\<userId\>/\<invoiceId\>
 
 ##### Remove Invoice From User
 
 DELETE
-> http://localhost:3000/users/invoices/<userId>/<invoiceId>
+
+> http://localhost:3000/users/invoices/\<userId\>/\<invoiceId\>
