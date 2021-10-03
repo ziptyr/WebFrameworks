@@ -134,6 +134,10 @@ GET
 
 #### Invoice
 
+How to get products into invoices array:
+- Add item/items into users cart
+- Buy users cart
+
 ##### Get Users Invoices
 
 GET
