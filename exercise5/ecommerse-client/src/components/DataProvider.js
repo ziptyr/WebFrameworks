@@ -1,11 +1,11 @@
 import React, {createContext, useState, useContext} from 'react';
-//import itemData from './item-data.json';
 import axios from 'axios';
 
 
 const server = 'http://localhost:4000';
 //const axios = require('axios').default;
-const itemData = [];
+//const itemData = [];
+var serverData = [];
 const DataContext = createContext();
 export const useData = () => useContext(DataContext);
 
@@ -16,16 +16,24 @@ export default function DataProvider({children}) {
   React.useEffect(() => {
     axios.get(server + '/items')
       .then(function (response) {
-          setData(response.data);
+        //itemData.push(...response.data);
+        serverData.push(...response.data);
+        setData(response.data);
       })
       .catch(function (error) {
-          console.log(error)
+        console.log(error)
       });
   }, []);
 
 
-  const [data, setData] = useState(itemData);
+  const [data, setData] = useState(serverData);
   const [adminMode, setAdminMode] = useState(false);
+
+  const ignoreCaseIncludes = (sentence, subString) => {
+    let str = sentence.toLowerCase();
+    let subStr = subString.toLowerCase();
+    return str.includes(subStr);
+  }
 
   const filter = (search) => {
     /* return item-data.json contents that includes search string
@@ -36,12 +44,19 @@ export default function DataProvider({children}) {
       */
 
     if (search === '') {
-      setData(itemData);
+      setData(serverData);
       return;
     }
 
-    let newData = [...itemData].filter(element =>
-      element.title.toLowerCase().includes(search.toLowerCase()));
+    let newData = [...serverData].filter(item => {
+      if (ignoreCaseIncludes(item.title, search)) {
+        return true;
+      } else if (ignoreCaseIncludes(item.manufacturer, search)) {
+        return true;
+      } else {
+        return false;
+      }
+    })
 
     setData(newData);
   }
@@ -69,8 +84,11 @@ export default function DataProvider({children}) {
     axios.post(server + '/items/', newItem)
       .then(function (response) {
         console.log(response)
-        let newData = [...data, response.data];
-        setData(newData);
+        setData(response.data);
+        serverData = response.data;
+        //let newData = [...data, response.data];
+        //serverData.push(response.data);
+        //setData(newData);
       })
       .catch(function (error) {
         console.log(error)
@@ -81,8 +99,11 @@ export default function DataProvider({children}) {
     axios.delete(server + '/items/' + id)
       .then(function (response) {
         console.log(response)
-        let newData = data.filter(e => e.id !== id);
-        setData(newData);
+        setData(response.data);
+        serverData = response.data;
+        //let newData = data.filter(e => e.id !== id);
+        //serverData.splice()
+        //setData(newData);
       })
       .catch(function (error) {
         console.log(error)
