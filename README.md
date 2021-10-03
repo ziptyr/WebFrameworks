@@ -17,7 +17,7 @@ GET
 
 #### Search
 
-Allowed <key> values: name, category, manufacturer
+Allowed <key\> values: `name`, `category` and `manufacturer`
 
 GET
 
