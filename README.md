@@ -5,35 +5,35 @@
 ### Items
 #### All
 
-**GET**
+GET
 > http://localhost:3000/items
 
 #### With ID
 
-**GET**
+GET
 > http://localhost:3000/items/<itemId>
 
 #### Search
 
 Allowed <key> values: name, category, manufacturer
 
-**GET**
+GET
 > http://localhost:3000/items/seach/<key>/<value>
 
 #### Post New Item
 
 ```
 {
-"name": "Planck EZ",
-"manufacturer": "ZSA Technology Labs",
-"category": "Peripherials",
-"description": "A keyboard that can change as your typing habits change.",
-"price": 245,
-"image": "planck-ez.png"
+  "name": "Planck EZ",
+  "manufacturer": "ZSA Technology Labs",
+  "category": "Peripherials",
+  "description": "A keyboard that can change as your typing habits change.",
+  "price": 245,
+  "image": "planck-ez.png"
 }
 ```
 
-**POST**
+POST
 > http://localhost:3000/items
 
 #### Modify Item
@@ -42,12 +42,12 @@ Full modify:
 
 ```
 {
-"name": "Planck EZ",
-"manufacturer": "ZSA Technology Labs",
-"category": "Peripherials",
-"description": "A keyboard that can change as your typing habits change.",
-"price": 245,
-"image": "planck-ez.png"
+  "name": "Planck EZ",
+  "manufacturer": "ZSA Technology Labs",
+  "category": "Peripherials",
+  "description": "A keyboard that can change as your typing habits change.",
+  "price": 245,
+  "image": "planck-ez.png"
 }
 ```
 
@@ -59,7 +59,7 @@ Partial Modify:
 }
 ```
 
-**PUT**
+PUT
 > http://localhost:3000/items/<itemId>
 
 
@@ -67,25 +67,25 @@ Partial Modify:
 
 #### Get All Users
 
-**GET**
+GET
 > http://localhost:3000/users
 
 #### Get User With ID
 
-**GET**
+GET
 > http://localhost:3000/users/id/<userId>
 
 #### Create a New User
 
 ```
 {
-    "name": "Name Surname",
-    "address": "Address 1",
-    "cart": []
+  "name": "Name Surname",
+  "address": "Address 1",
+  "cart": []
 }
 ```
 
-**POST**
+POST
 > http://localhost:3000/users
 
 
@@ -95,27 +95,27 @@ Partial Modify:
 
 ##### Add to Users Cart
 
-**POST**
+POST
 > http://localhost:3000/users/cart/<userId>/<itemId>
 
 ##### Get Users Cart
 
-**GET**
+GET
 > http://localhost:3000/users/cart/<userId>
 
 ##### Remove Item From Users Cart
 
-**DELETE**
+DELETE
 > http://localhost:3000/users/cart/<userId>/<itemId>
 
 ##### Remove All Items From Users Cart
 
-**DELETE**
+DELETE
 > http://localhost:3000/users/cart/<userId>/<itemId>
 
 ##### Buy Users Cart
 
-**GET**
+GET
 > http://localhost:3000/users/cart/buy/<userId>
 
 
@@ -123,15 +123,15 @@ Partial Modify:
 
 ##### Get Users Invoices
 
-**GET**
+GET
 > http://localhost:3000/users/invoices/<userId>
 
 ##### Get Users Invoice
 
-**GET**
+GET
 > http://localhost:3000/users/invoices/<userId>/<invoiceId>
 
 ##### Remove Invoice From User
 
-**DELETE**
+DELETE
 > http://localhost:3000/users/invoices/<userId>/<invoiceId>
