@@ -21,7 +21,7 @@ Allowed <key\> values: `name`, `category` and `manufacturer`
 
 GET
 
-> http://localhost:3000/items/seach/<key\>/<value\>
+> http://localhost:3000/items/seach/<key\>/<searchValue\>
 
 #### Post New Item
 
