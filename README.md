@@ -13,7 +13,7 @@ GET
 
 GET
 
-> http://localhost:3000/items/\<itemId\>
+> http://localhost:3000/items/<itemId\>
 
 #### Search
 
@@ -21,7 +21,7 @@ Allowed <key> values: name, category, manufacturer
 
 GET
 
-> http://localhost:3000/items/seach/\<key\>/\<value\>
+> http://localhost:3000/items/seach/<key\>/<value\>
 
 #### Post New Item
 
@@ -65,7 +65,7 @@ Partial Modify:
 
 PUT
 
-> http://localhost:3000/items/\<itemId\>
+> http://localhost:3000/items/<itemId\>
 
 
 ### Users
@@ -80,7 +80,7 @@ GET
 
 GET
 
-> http://localhost:3000/users/id/\<userId\>
+> http://localhost:3000/users/id/<userId\>
 
 #### Create a New User
 
@@ -105,31 +105,31 @@ POST
 
 POST
 
-> http://localhost:3000/users/cart/\<userId\>/\<itemId\>
+> http://localhost:3000/users/cart/<userId\>/<itemId\>
 
 ##### Get Users Cart
 
 GET
 
-> http://localhost:3000/users/cart/\<userId\>
+> http://localhost:3000/users/cart/<userId\>
 
 ##### Remove Item From Users Cart
 
 DELETE
 
-> http://localhost:3000/users/cart/\<userId\>/\<itemId\>
+> http://localhost:3000/users/cart/<userId\>/<itemId\>
 
 ##### Remove All Items From Users Cart
 
 DELETE
 
-> http://localhost:3000/users/cart/\<userId\>/\<itemId\>
+> http://localhost:3000/users/cart/<userId\>/<itemId\>
 
 ##### Buy Users Cart
 
 GET
 
-> http://localhost:3000/users/cart/buy/\<userId\>
+> http://localhost:3000/users/cart/buy/<userId\>
 
 
 #### Invoice
@@ -138,16 +138,16 @@ GET
 
 GET
 
-> http://localhost:3000/users/invoices/\<userId\>
+> http://localhost:3000/users/invoices/<userId\>
 
 ##### Get Users Invoice
 
 GET
 
-> http://localhost:3000/users/invoices/\<userId\>/\<invoiceId\>
+> http://localhost:3000/users/invoices/<userId\>/<invoiceId\>
 
 ##### Remove Invoice From User
 
 DELETE
 
-> http://localhost:3000/users/invoices/\<userId\>/\<invoiceId\>
+> http://localhost:3000/users/invoices/<userId\>/<invoiceId\>
