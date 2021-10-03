@@ -9,20 +9,15 @@ export default function Items() {
   /* maps data into items*/
 
   const {data, adminMode} = useData();
-
-  let adminView = (adminMode) ? <AdminView /> : '';
-  let user = data.map(item => <Item key={item.id} item={item} />)
-
-  let output = <>
-    {adminView}
-    <br />
-    <div className='itemContainer'>
-        {(adminMode) ? <AdminItems /> : user}
-    </div>
-    </>
-  ;
+  const userItems = data.map(item => <Item key={item.id} item={item} />)
 
   return (
-    output
+    <>
+      {(adminMode) ? <AdminView /> : ''}
+      <br />
+      <div className='itemContainer'>
+        {(adminMode) ? <AdminItems /> : userItems}
+      </div>
+    </>
   )
 }

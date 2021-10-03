@@ -16,9 +16,7 @@ export default function Header() {
       Admin
     </button>;
 
-  //let adminView = (adminMode) ? <AdminView /> : '';
-
-  let output = 
+  return (
     <header>
       <div className='search'>
         <div>
@@ -33,10 +31,6 @@ export default function Header() {
         </div>
         <div>{adminButton}</div>
       </div>
-    </header>;
-  
-
-  return (
-    output
+    </header>
   )
 }
