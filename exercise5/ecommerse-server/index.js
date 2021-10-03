@@ -60,7 +60,7 @@ app.get('/items/:search', (req, res) => {
 app.post('/items', (req, res) => {
   let newItem = new Item({...req.body});
   items.push(newItem);
-  res.json(newItem);
+  res.json(items);
 });
 
 app.delete('/items/:id', (req, res) => {
@@ -68,7 +68,8 @@ app.delete('/items/:id', (req, res) => {
 
   if (index !== -1) {
     items.splice(index, 1);
-    res.send('item deleted');
+    res.json(items);
+    //res.send('item deleted');
   } else {
     res.send('item not found');
   }
