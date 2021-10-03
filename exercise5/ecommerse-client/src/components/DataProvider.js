@@ -3,9 +3,7 @@ import axios from 'axios';
 
 
 const server = 'http://localhost:4000';
-//const axios = require('axios').default;
-//const itemData = [];
-var serverData = [];
+const serverData = {items: []};
 const DataContext = createContext();
 export const useData = () => useContext(DataContext);
 
@@ -14,10 +12,11 @@ export default function DataProvider({children}) {
   /* makes item-data.json data and operations available for files*/
 
   React.useEffect(() => {
+    /* get initial item data from server */
+
     axios.get(server + '/items')
       .then(function (response) {
-        //itemData.push(...response.data);
-        serverData.push(...response.data);
+        serverData.items.push(...response.data);
         setData(response.data);
       })
       .catch(function (error) {
@@ -26,29 +25,33 @@ export default function DataProvider({children}) {
   }, []);
 
 
-  const [data, setData] = useState(serverData);
+  const [data, setData] = useState(serverData.items);
   const [adminMode, setAdminMode] = useState(false);
 
   const ignoreCaseIncludes = (sentence, subString) => {
+    /* test if string contains substring
+     *
+     * case insensitive test with true|false return
+     */
+
     let str = sentence.toLowerCase();
     let subStr = subString.toLowerCase();
     return str.includes(subStr);
   }
 
   const filter = (search) => {
-    /* return item-data.json contents that includes search string
-      *
-      * if string is empty return original array and return
-      * make a new array of item-data objects that has a title that
-      * includes search string
-      */
+    /* filter client items
+     *
+     * show all items if search string is empyt, test if title or
+     * manufacturer contais search string
+     */
 
     if (search === '') {
-      setData(serverData);
+      setData(serverData.items);
       return;
     }
 
-    let newData = [...serverData].filter(item => {
+    let newData = [...serverData.items].filter(item => {
       if (ignoreCaseIncludes(item.title, search)) {
         return true;
       } else if (ignoreCaseIncludes(item.manufacturer, search)) {
@@ -57,7 +60,6 @@ export default function DataProvider({children}) {
         return false;
       }
     })
-
     setData(newData);
   }
 
@@ -78,6 +80,11 @@ export default function DataProvider({children}) {
   //}
 
   const addNewItem = (newItem) => {
+    /* sed newItem to server and client
+     *
+     * axios waits server for response with new set of items for client
+     */
+
     let lastItem = data[data.length - 1];
     newItem.id = lastItem.id + 1;
 
@@ -85,10 +92,7 @@ export default function DataProvider({children}) {
       .then(function (response) {
         console.log(response)
         setData(response.data);
-        serverData = response.data;
-        //let newData = [...data, response.data];
-        //serverData.push(response.data);
-        //setData(newData);
+        serverData.items = response.data;
       })
       .catch(function (error) {
         console.log(error)
@@ -96,14 +100,16 @@ export default function DataProvider({children}) {
   }
 
   const removeItem = (id) => {
+    /* remove item from server and client
+     *
+     * axios waits server response and corrects client items
+     */
+
     axios.delete(server + '/items/' + id)
       .then(function (response) {
         console.log(response)
         setData(response.data);
-        serverData = response.data;
-        //let newData = data.filter(e => e.id !== id);
-        //serverData.splice()
-        //setData(newData);
+        serverData.items = response.data;
       })
       .catch(function (error) {
         console.log(error)
