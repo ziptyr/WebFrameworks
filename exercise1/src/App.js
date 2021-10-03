@@ -5,7 +5,7 @@ import Tiedotteet from './components/Tiedotteet';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
       <Tiedotteet />
       <Paaosio />

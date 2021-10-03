@@ -48,30 +48,6 @@ const items = [
 
 app.use(bodyParser.json());
 
-/*// Purchase
-app.get('/purchase/:userId', (req, res) => {
-  let user = users.find(u => u.id === req.params.userId);
-  res.json(user.getCart());
-})
-
-app.get('/purchase/invoice/:userId', (req, res) => {
-  let user = users.find(u => u.id === req.params.userId);
-  res.json(user.getInvoice());
-})
-
-//app.get('/purchase/invoice/', (req, res) => {
-//  let invoices = users.map(user => user.getInvoice());
-//  res.json(invoices);
-//})
-
-app.post('/purchase/userId', (req, res) => {
-  let user = findWithKeyAndValue(users, "id", req.body.userId);
-  let product = findWithKeyAndValue(items, "id", req.body.productId);
-
-  user.addToCart(product, req.body.qty);
-  res.send('item added into shopping cart');
-})*/
-
 // Users
 app.get('/users', (req, res) => {
   res.json(users);

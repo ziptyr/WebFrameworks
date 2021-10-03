@@ -7,7 +7,9 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <App 
-      applicationDescription={"The best shopping list, now with component title"}
+      applicationDescription={
+        "The best shopping list, now with component title"
+      }
       applicationName={"Shopping List"} />
   </React.StrictMode>,
   document.getElementById('root')
