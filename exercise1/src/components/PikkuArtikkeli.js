@@ -11,7 +11,11 @@ export default function PikkuArtikkeli(props) {
               {props.otsikko}
           </h3>
       </div>
-      <img className={style.pikkuKuva} src={'/images/' + props.id + '.png'} />
+      <img
+        className={style.pikkuKuva}
+        src={'/images/' + props.id + '.png'}
+        alt={props.otsikko + '.png'}
+      />
     </div>
   )
 }

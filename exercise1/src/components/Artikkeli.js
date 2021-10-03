@@ -10,6 +10,7 @@ export default function Artikkeli(props) {
         <h1>{props.aihe}</h1>
         <img
           src={'/images/' + props.id + '.png'}
+          alt={props.otsikot + '.png'}
           className={style.isoKuva} />
         <h2>
           <span className={style.artikkeliAihe}>
@@ -28,6 +29,7 @@ export default function Artikkeli(props) {
       <div className={style.main}>
         <img
           src={'/images/' + props.id + '.png'}
+          alt={props.otsikot + '.png'}
           className={style.isoKuva}
         />
         <h2>
