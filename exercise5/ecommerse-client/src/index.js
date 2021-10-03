@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import DataProvider from "./components/DataProvider";
+import DataProvider from './components/DataProvider';
 
 
 /* makes DataProvider available for App as react context*/

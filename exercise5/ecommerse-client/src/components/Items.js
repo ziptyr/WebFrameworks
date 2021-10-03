@@ -11,7 +11,6 @@ export default function Items() {
   const {data, adminMode} = useData();
 
   let adminView = (adminMode) ? <AdminView /> : '';
-
   let user = data.map(item => <Item key={item.id} item={item} />)
 
   let output = <>
@@ -20,7 +19,8 @@ export default function Items() {
     <div className='itemContainer'>
         {(adminMode) ? <AdminItems /> : user}
     </div>
-    </>;
+    </>
+  ;
 
   return (
     output
