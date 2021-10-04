@@ -1,6 +1,6 @@
 ## Exercise 4 API
 
-> Replace <> parts with a corresponding value. Get Id values with API calls.
+> Replace <> parts with a corresponding value. Get the id values from the API calls.
 
 ### Items
 #### All
@@ -87,8 +87,7 @@ GET
 ```
 {
   "name": "Name Surname",
-  "address": "Address 1",
-  "cart": []
+  "address": "Address 1"
 }
 ```
 
@@ -103,9 +102,11 @@ POST
 
 ##### Add to Users Cart
 
+Int value of how many items to add into cart: <item quantity\>
+
 POST
 
-> http://localhost:3000/users/cart/<userId\>/<itemId\>
+> http://localhost:3000/users/cart/<userId\>/<itemId\>/<item quantity\>
 
 ##### Get Users Cart
 
