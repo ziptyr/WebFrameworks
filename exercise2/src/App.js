@@ -58,12 +58,26 @@ class App extends React.Component {
           applicationName={ applicationName } />
         <ShoppingList items={ this.state.items } />
 
-        <button onClick={this.addItems('Carrots', 5)}>Add carrots</button>
-        <button onClick={this.addItems('Strawberries', 25)}>
+        <button onClick={
+          this.addItems('Carrots', Math.floor(Math.random() * 100))
+        }>
+          Add carrots
+        </button>
+        <button onClick={
+          this.addItems('Strawberries', Math.floor(Math.random() * 100))
+        }>
           Add strawberries
         </button>
-        <button onClick={this.addItems('Yogurt', 1)}>Add yogurt</button>
-        <button onClick={this.addItems('Beer', 24)}>Add beer</button>
+        <button onClick={
+          this.addItems('Yogurt', Math.floor(Math.random() * 100))
+        }>
+          Add yogurt
+        </button>
+        <button onClick={
+          this.addItems('Beer', Math.floor(Math.random() * 100))
+        }>
+          Add beer
+        </button>
       </div>
     )
   }
