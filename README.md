@@ -1,6 +1,6 @@
 ## Exercise 4 API
 
-> Replace <> parts with a corresponding value. Get Id values with API calls.
+> Replace <> parts with a corresponding value. Get the id values from the API calls.
 
 ### Items
 #### All
