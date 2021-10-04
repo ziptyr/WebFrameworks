@@ -103,9 +103,11 @@ POST
 
 ##### Add to Users Cart
 
+Int value of how many items to add into cart: <item quantity\>
+
 POST
 
-> http://localhost:3000/users/cart/<userId\>/<itemId\>
+> http://localhost:3000/users/cart/<userId\>/<itemId\>/<item quantity\>
 
 ##### Get Users Cart
 
