@@ -88,7 +88,6 @@ GET
 {
   "name": "Name Surname",
   "address": "Address 1",
-  "cart": []
 }
 ```
 
